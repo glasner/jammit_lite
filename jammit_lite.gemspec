@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "jammit_lite.gemspec",
      "lib/jammit/lite/asset.rb",
      "lib/jammit/lite/bundle.rb",
      "lib/jammit/lite/helper.rb",
