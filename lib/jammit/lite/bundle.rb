@@ -9,12 +9,11 @@ module Jammit
         files.map! do |file|
           if file.match(/\*/).nil?
             # return single file name
-            file
+            return file
           else
             # expand wildcard into all matching filenames
-            Dir[Rails.root + file].map { |path| path.gsub("#{Rails.root}/",'') }
-          end    
-          
+            return Dir[Rails.root + file].map { |path| path.gsub("#{Rails.root}/",'') }
+          end          
         end
         files.flatten!
       end
