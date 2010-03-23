@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "jammit_lite"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = "Replaces full Jammit gem in production. Made to reduce slug size at Heroku"
+    gem.description = "Jammit is awesome, but the gem is giant. Jammit::Lite loads Jammit in development, but replaces it in production saving over 9MB."
     gem.email = "jordan@digitalignition.com"
     gem.homepage = "http://github.com/glasner/jammit_lite"
     gem.authors = ["Jordan Glasner"]
