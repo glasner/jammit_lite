@@ -1,6 +1,6 @@
 = jammit_lite
 
-Jammit::Lite replaces Jammit in production environments that pre-bundle all their files, e.g. Heroku. Removing Jammit as a dependency from the production app saves over 9MB, which means faster deploys at Heroku.
+Jammit::Lite replaces Jammit in production Rails apps that pre-bundle all their files, e.g. Heroku. Removing Jammit as a dependency from the production app saves over 9MB, which means faster deploys at Heroku.
 
 == Installation
 
