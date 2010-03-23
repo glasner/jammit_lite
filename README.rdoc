@@ -1,6 +1,19 @@
 = jammit_lite
 
-Description goes here.
+Jammit::Lite replaces Jammit in production environments that pre-bundle all their files, e.g. Heroku. Removing Jammit as a dependency from the production app saves over 9MB, which means faster deploys at Heroku.
+
+== Installation
+
+sudo gem install jammit_lite
+
+To switch over you need to make two changes:
+
+=== In config/enviroment.rb
+config.gem 'jammit' to config.gem 'jammit_lite'
+
+=== In config/routes.rb
+change Jammit::Routes.draw(map) to Jammit::Lite::Routes.draw(map)
+
 
 == Note on Patches/Pull Requests
  
