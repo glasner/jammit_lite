@@ -6,16 +6,15 @@ module Jammit
       
       # takes array of files from yaml hash and expands any wilcards
       def self.expand(files)
-        files.map! do |file|
+        files.map do |file|
           if file.match(/\*/).nil?
             # return single file name
-            return file
+            file
           else
             # expand wildcard into all matching filenames
-            return Dir[Rails.root + file].map { |path| path.gsub("#{Rails.root}/",'') }
+            Dir[Rails.root + file].map { |path| path.gsub("#{Rails.root}/",'') }
           end          
-        end
-        files.flatten!
+        end.flatten
       end
 
       attr_accessor :path
