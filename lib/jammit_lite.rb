@@ -16,11 +16,14 @@ module Jammit
     # returns hash from config/assets.yml
     # expands all wildcard paths
     def self.asset_hash
-      yaml = File.open("#{Rails.root}/config/assets.yml")
-      hash = YAML::load(yaml).symbolize_keys
-      hash.each do |key,bundles|
+      yaml.each do |key,bundles|
         bundles.each { |name,files| bundles[name] = Jammit::Lite::Bundle.expand(files) }
       end
+    end
+    
+    def self.yaml
+      yaml = File.open("#{Rails.root}/config/assets.yml")
+      hash = YAML::load(yaml).symbolize_keys
     end
     
   end
